@@ -13,9 +13,12 @@ body {
 $list-columns: 1 2 3 4 5 6 7 8 9 10 11 12;
 $list-rows: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
 
+$cols-nr: 12;
+$rows-nr: 16;
+
 @each $j in $list-columns {
   @for $i from 1 through 13 {
-    .col--#{$j}-#{$i} {
+    .col__#{$j}_#{$i} {
       grid-column: #{$j} / #{$i};
     }
   }
@@ -23,7 +26,7 @@ $list-rows: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
 
 @each $j in $list-columns {
   @for $i from 1 through 17 {
-    .row--#{$j}-#{$i} {
+    .row__#{$j}_#{$i} {
       grid-row: #{$j} / #{$i};
     }
   }
@@ -31,8 +34,8 @@ $list-rows: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat($cols-nr, 1fr);
+  grid-template-rows: repeat($rows-nr, 1fr);
   place-items: center;
   width: 100vw;
   height: 100vh;
