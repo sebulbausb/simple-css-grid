@@ -8,6 +8,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 $cols-nr: 12;
@@ -24,7 +25,7 @@ $list-rows: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
   }
 }
 
-@each $j in $list-columns {
+@each $j in $list-rows {
   @for $i from 1 through 17 {
     .row__#{$j}_#{$i} {
       grid-row: #{$j} / #{$i};
@@ -47,16 +48,41 @@ $list-rows: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
     width: 100%;
     height: 100%;
     font-size: 30px;
+    border: 4px solid white;
   }
 }
-
 .pink {
   background: pink;
+}
+
+.purple {
+  background: purple;
 }
 
 .green {
   background: green;
 }
+
 .yellow {
   background: yellow;
+}
+
+.fuchsia {
+  background: fuchsia;
+}
+
+.blue {
+  background: #4bd3c6;
+}
+
+textarea {
+  background: black;
+  color: gold;
+  width: 50%;
+  resize: none;
+}
+aside {
+  textarea {
+    height: 50%;
+  }
 }
